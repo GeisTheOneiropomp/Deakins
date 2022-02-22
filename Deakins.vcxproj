@@ -30,9 +30,9 @@
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{8c321a6d-3800-4be0-9a0b-0f34da71a60e}</ProjectGuid>
-    <RootNamespace>RayTracing</RootNamespace>
+    <RootNamespace>Deakins</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>RayTracing</ProjectName>
+    <ProjectName>Deakins</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -246,7 +246,7 @@
     <ClInclude Include="Ray.h" />
     <ClInclude Include="RayColorUtil.h" />
     <ClInclude Include="resource.h" />
-    <ClInclude Include="RTUtil.h" />
+    <ClInclude Include="D_Util.h" />
     <ClInclude Include="SceneUtil.h" />
     <ClInclude Include="Skybox.h" />
     <ClInclude Include="SolidColor.h" />
@@ -256,7 +256,7 @@
     <ClInclude Include="Vec3Util.h" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="RayTracing.rc" />
+    <ResourceCompile Include="Deakins.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
