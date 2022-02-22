@@ -1,6 +1,6 @@
 #include "ImageTexture.h"
-#include "rtw_stb_image.h"
 #include <string>
+#include "d_stb_image.h"
 using std::string;
 
 ImageTexture::ImageTexture() : data(nullptr), width(0), height(0), bytes_per_scanline(0)

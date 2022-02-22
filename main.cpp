@@ -15,7 +15,6 @@
 #include "SceneUtil.h"
 #include "RayColorUtil.h"
 #include "ImageTexture.h"
-#include "CheckerTexture.h"
 #include "NoiseTexture.h"
 #include "math.h"
 #include "Skybox.h"
@@ -34,7 +33,7 @@ int main() {
     //world
     auto R = cos(pi / 4);
 
-    auto world = earth();
+    HittableList world;
     auto skybox = new Skybox("img\\nightsky.jpg");
     Point3 lookfrom(13, 2, 3);
     Point3 lookat(0, 0, 0);
@@ -65,64 +64,12 @@ int main() {
         shift1 = 1;
         break;
     case 2:
-        world = two_spheres();
-        background = Color(0.70, 0.80, 1.00);
-        lookfrom = Point3(13, 2, 3);
-        lookat = Point3(0, 0, 0);
-        fieldOfView = 20.0;
-        break;
-    case 3:
-        world = earth();
-        background = Color(0.70, 0.80, 1.00);
-        lookfrom = Point3(13, 2, 3);
-        lookat = Point3(0, 0, 0);
-        fieldOfView = 20.0;
-        break;
-    case 4:
+    default:
         world = two_perlin_spheres();
         background = Color(0.90, 0.60, 0.60);
         lookfrom = Point3(13, 2, 3);
         lookat = Point3(0, 0, 0);
         fieldOfView = 20.0;
-        break;
-    case 5:
-        world = simple_light();
-        samplesPerPixel = 400;
-        background = Color(0, 0, 0);
-        lookfrom = Point3(26, 3, 6);
-        lookat = Point3(0, 2, 0);
-        fieldOfView = 20.0;
-        break;
-    case 6:
-        world = CornellBox();
-        kAspectRatio = 1.0;
-        kImageWidth = 600;
-        samplesPerPixel = 100;
-        background = Color(0, 0, 0);
-        lookfrom = Point3(278, 278, -800);
-        lookat = Point3(278, 278, 0);
-        fieldOfView = 40.0;
-        break;
-    case 7:
-        world = CornellSmoke();
-        kAspectRatio = 1.0;
-        kImageWidth = 700;
-        samplesPerPixel = 200;
-        lookfrom = Point3(278, 278, -800);
-        lookat = Point3(278, 278, 0);
-        fieldOfView = 40.0;
-        break; 
-    case 8:
-    default:
-        vup = Vec3(1, 0, 0);
-        auto moonPlace = Point3(0, -30, 0);
-        world = MoonScene(moonPlace);
-        kAspectRatio = 2.0;
-        lookfrom = Point3(0, 1, .2);
-        samplesPerPixel = 20;
-        lookat = Point3(0, 0, 0);
-        fieldOfView = 30.0;
-        aperture = 0.0;
         break;
     }
 
