@@ -1,6 +1,6 @@
 #include "ColorUtil.h"
-#include "rtutil.h"
-using namespace rt_math;
+#include "D_util.h"
+using namespace deakins_math;
 namespace ColorUtil {
 	void ColorUtil::WriteColor(std::ostream& out, Color pixel_color, int samplesPerPixel)
 	{

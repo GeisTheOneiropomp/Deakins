@@ -1,7 +1,7 @@
 #include "Skybox.h"
-#include "RTUtil.h"
+#include "D_Util.h"
 #include "Vec3Util.h"
-using namespace rt_math;
+using namespace deakins_math;
 
 Skybox::Skybox()
 {

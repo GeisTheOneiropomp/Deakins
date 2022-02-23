@@ -1,6 +1,6 @@
 #include "Camera.h"
 #include <math.h>
-using namespace rt_math;
+using namespace deakins_math;
 
 //50 mm camera
 // aperture 

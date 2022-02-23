@@ -1,5 +1,5 @@
 #include "Sphere.h"
-using namespace rt_math;
+using namespace deakins_math;
 using namespace Vector3Namespace;
 
 Sphere::Sphere()
@@ -37,14 +37,6 @@ bool Sphere::Hit(const Ray& r, double t_min, double t_max, HitRecord& rec) const
 	getSphereUV(outwardNormal, rec.u_coord, rec.v_coord);
 	rec.material_pointer = materialPointer;
 
-	return true;
-}
-
-bool Sphere::BoundingBox(double time0, double time1, AABB& output_box) const
-{
-	output_box = AABB(
-		center - Vec3(radius, radius, radius),
-		center + Vec3(radius, radius, radius));
 	return true;
 }
 
