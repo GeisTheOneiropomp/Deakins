@@ -3,7 +3,7 @@
 #include "Ray.h"
 #include "vec3.h"
 #include "Vec3Util.h"
-#include "rtutil.h"
+#include "D_util.h"
 
 #include "HittableList.h"
 #include "sphere.h"
@@ -18,8 +18,10 @@
 #include "NoiseTexture.h"
 #include "math.h"
 #include "Skybox.h"
+#include "D_Util.h"
+#include "FileResources.h"
 
-using namespace rt_math;
+using namespace deakins_math;
 
 int main() {
 
@@ -34,7 +36,7 @@ int main() {
     auto R = cos(pi / 4);
 
     HittableList world;
-    auto skybox = new Skybox("img\\nightsky.jpg");
+    auto skybox = new Skybox(TSURUTA_FILE);
     Point3 lookfrom(13, 2, 3);
     Point3 lookat(0, 0, 0);
     Vec3 vup(0, 1, 0);
@@ -51,6 +53,7 @@ int main() {
 
     switch (0) {
     case 1:
+    default:
         world = RandomScene();    
         samplesPerPixel = 100;
         lookfrom = Point3(3, 2, 3);
@@ -64,7 +67,6 @@ int main() {
         shift1 = 1;
         break;
     case 2:
-    default:
         world = two_perlin_spheres();
         background = Color(0.90, 0.60, 0.60);
         lookfrom = Point3(13, 2, 3);
@@ -87,11 +89,11 @@ int main() {
                 auto v = (j + RandomDouble()) /  (double (kImageHeight - 1.0));
                 if (RandomDouble(0, 1) < 1 - diffractionRatio) {
                     Ray r = cam.getRay(u, v);
-                    normal_pixel_color +=  RayColorWithBackground(r, skybox, world, maxDepth);
+                    normal_pixel_color +=  RayColorWithBackground(r, skybox, world, maxDepth) *cam.vignetteFactor(u, v);
                 }
                 else {
                     MonochromaticRay mr = cam.getDiffractionRay(u, v, RandomDouble(380.00, 750.00));
-                    normal_pixel_color +=  DiffractionRayColorWithBackground(mr, skybox, world, maxDepth);
+                    normal_pixel_color +=  DiffractionRayColorWithBackground(mr, skybox, world, maxDepth) * cam.vignetteFactor(u, v);
                 }
             }
             

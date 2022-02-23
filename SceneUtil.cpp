@@ -8,7 +8,7 @@
 #include "ImageTexture.h"
 #include "HittableList.h"
 
-using namespace rt_math;
+using namespace deakins_math;
 
 HittableList two_perlin_spheres() {
     HittableList objects;

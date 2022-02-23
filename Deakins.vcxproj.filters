@@ -185,6 +185,9 @@
     <ClInclude Include="d_stb_image.h">
       <Filter>Header Files\Textures</Filter>
     </ClInclude>
+    <ClInclude Include="FileResources.h">
+      <Filter>Header Files\Utilities</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Deakins.rc">

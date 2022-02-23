@@ -7,7 +7,7 @@
 
 // Usings
 
-namespace rt_math {
+namespace deakins_math {
     using std::shared_ptr;
     using std::make_shared;
     using std::sqrt;

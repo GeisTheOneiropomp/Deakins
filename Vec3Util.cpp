@@ -1,7 +1,7 @@
 #include "Vec3Util.h"
-#include "RTUtil.h"
+#include "D_Util.h"
 
-using namespace rt_math;
+using namespace deakins_math;
 
     std::ostream& operator<<(std::ostream& out, const Vec3& v)
     {

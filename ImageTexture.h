@@ -2,7 +2,7 @@
 #include "Texture.h"
 #include <algorithm>
 #include <iostream>
-#include "rtutil.h"
+#include "D_util.h"
 using std::string;
 class ImageTexture : public Texture
 {

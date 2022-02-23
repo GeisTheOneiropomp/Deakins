@@ -36,8 +36,8 @@ Color ImageTexture::value(double u, double v, const Vec3& p) const
         return Color(1, 0, 0);
 
     // Clamp input texture coordinates to [0,1] x [1,0]
-    u = rt_math::Clamp(u, 0.0, 1.0);
-    v = 1.0 - rt_math::Clamp(v, 0.0, 1.0);  // Flip V to image coordinates
+    u = deakins_math::Clamp(u, 0.0, 1.0);
+    v = 1.0 - deakins_math::Clamp(v, 0.0, 1.0);  // Flip V to image coordinates
 
     auto i = static_cast<int>(u * width);
     auto j = static_cast<int>(v * height);
