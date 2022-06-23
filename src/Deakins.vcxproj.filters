@@ -105,6 +105,9 @@
     <ClCompile Include="MonochromaticRay.cpp">
       <Filter>Source Files\Rays</Filter>
     </ClCompile>
+    <ClCompile Include="NoiseImageTexture.cpp">
+      <Filter>Source Files\Textures</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
@@ -190,6 +193,9 @@
     </ClInclude>
     <ClInclude Include="Config.h">
       <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NoiseImageTexture.h">
+      <Filter>Header Files\Textures</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

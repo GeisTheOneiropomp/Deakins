@@ -74,7 +74,7 @@ double Camera::getDiffractionIntensity(double theta, double wavelength) const {
     return pow((sin(beta)/beta),2);
 }
 
-double Camera::vignetteFactor(double s, double t) const {
+double Camera::vignetteFactor(double s, double t, double vignetteFactor) const {
 
     if (vignetteOption) {
         auto randomTime = WeightedExponential(RandomDouble(time0, time1), 5);
@@ -83,7 +83,9 @@ double Camera::vignetteFactor(double s, double t) const {
 
         Vec3 opticalAxis = lensCenter - origin;
         Vec3 chiefRay = lensCenter - (lowerLeftCorner + (s * (horizontal + Vec3(randomShift, 0, 0)) + (t * (vertical + Vec3(0, randomTilt, 0)))));
-        return pow(CosAngle(opticalAxis, chiefRay), 4);
+        auto v = pow(CosAngle(opticalAxis, chiefRay), 4);
+        auto vg = double (1.0 / vignetteFactor);
+        return v + (vignetteFactor * (1.0 -v)) ;
     }
     else {
         return 1;

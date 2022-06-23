@@ -1,0 +1,11 @@
+diff a/README.md b/README.md	(rejected hunks)
+@@ -148,6 +148,9 @@
+  [simplevignette]:          OutputGallery/Simple/SimpleVignette.png
+  [simplediffraction]:          OutputGallery/Simple/SimpleDiffraction.png
+  [simpledeakins]:          OutputGallery/Simple/SimpleDeakins.png
+++<<<<<<< Updated upstream
+ +
+ +[winter]:          OutputGallery/Stills/Aojj_winter.jpg
+ +[horseback]:          OutputGallery/Stills/jesse-james.jpg
+++=======
+++>>>>>>> Stashed changes

@@ -39,12 +39,12 @@ int main() {
     switch (ScenePath) {
     case SCENEPATH::BASESCENE :
     default:
-        world = RandomScene();    
-        lookfrom = Point3(3, 2, 3);
+        world = SingleSphere();    
+        lookfrom = Point3(3, 1, 0);
         lookat = Point3(0, 0, 0);
         break;
     case 2:
-        world = two_perlin_spheres();
+        world = TwoPerlinSpheres();
         lookfrom = Point3(13, 2, 3);
         lookat = Point3(0, 0, 0);
         break;
@@ -64,11 +64,11 @@ int main() {
                 auto v = (j + RandomDouble()) /  (double (ImageHeight - 1.0));
                 if (RandomDouble(0, 1) < 1 - DiffractionRatio) {
                     Ray r = cam.getRay(u, v);
-                    normal_pixel_color +=  RayColorWithBackground(r, skybox, world, MaxDepth) *cam.vignetteFactor(u, v);
+                    normal_pixel_color +=  RayColorWithBackground(r, skybox, world, MaxDepth) *cam.vignetteFactor(u, v, VignetteFactor);
                 }
                 else {
                     MonochromaticRay mr = cam.getDiffractionRay(u, v, RandomDouble(380.00, 750.00));
-                    normal_pixel_color +=  DiffractionRayColorWithBackground(mr, skybox, world, MaxDepth) * cam.vignetteFactor(u, v);
+                    normal_pixel_color +=  DiffractionRayColorWithBackground(mr, skybox, world, MaxDepth) * cam.vignetteFactor(u, v, VignetteFactor);
                 }
             }
             

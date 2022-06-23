@@ -7,10 +7,12 @@
 #include "NoiseTexture.h"
 #include "ImageTexture.h"
 #include "HittableList.h"
+#include "FileResources.h"
+#include "NoiseImageTexture.h"
 
 using namespace deakins_math;
 
-HittableList two_perlin_spheres() {
+HittableList TwoPerlinSpheres() {
     HittableList objects;
 
     auto pertext = make_shared<NoiseTexture>(10);
@@ -19,6 +21,16 @@ HittableList two_perlin_spheres() {
 
     return objects;
 }
+
+HittableList SingleSphere() {
+    HittableList world;
+
+    auto material1 = make_shared<Dielectric>(1.5);
+    world.add(make_shared<Sphere>(Point3(0, 0, 0), 1.0, material1));
+
+    return world;
+}
+
 
 HittableList RandomScene() {
     HittableList world;

@@ -216,6 +216,7 @@
     <ClCompile Include="Metal.cpp" />
     <ClCompile Include="MonochromaticRay.cpp" />
     <ClCompile Include="MovingSphere.cpp" />
+    <ClCompile Include="NoiseImageTexture.cpp" />
     <ClCompile Include="NoiseTexture.cpp" />
     <ClCompile Include="Perlin.cpp" />
     <ClCompile Include="Ray.cpp" />
@@ -243,6 +244,7 @@
     <ClInclude Include="Metal.h" />
     <ClInclude Include="MonochromaticRay.h" />
     <ClInclude Include="MovingSphere.h" />
+    <ClInclude Include="NoiseImageTexture.h" />
     <ClInclude Include="NoiseTexture.h" />
     <ClInclude Include="Perlin.h" />
     <ClInclude Include="Ray.h" />

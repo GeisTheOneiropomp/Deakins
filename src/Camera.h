@@ -15,7 +15,7 @@ public:
 
     Ray getRay(double u, double v) const;
     MonochromaticRay getDiffractionRay(double s, double t, double wavelength) const;
-    double vignetteFactor(double s, double t) const;
+    double vignetteFactor(double s, double t, double vignetteFactor) const;
 
     double interpolateTilt(double randomVar) const;
     double interpolateShift(double randomVar) const;

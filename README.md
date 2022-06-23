@@ -78,8 +78,8 @@ If one wishes to alter the strength of the tilt-shift effect, one only needs to 
 
 `Config.h`
 ```c++
-const static double TiltFactor = 0.0;
-const static double ShiftFactor = 0.0;
+const static double TiltFactor = 1.0;
+const static double ShiftFactor = 1.0;
 ```
 
 ## Image Gallery: Optical Vignetting
@@ -148,6 +148,5 @@ The following section compares post-Lambertian models of the Moon with the stand
 [simplevignette]:          OutputGallery/Simple/SimpleVignette.png
 [simplediffraction]:          OutputGallery/Simple/SimpleDiffraction.png
 [simpledeakins]:          OutputGallery/Simple/SimpleDeakins.png
-
 [winter]:          OutputGallery/Stills/Aojj_winter.jpg
 [horseback]:          OutputGallery/Stills/jesse-james.jpg
