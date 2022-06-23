@@ -9,8 +9,7 @@ This program implements some effects identified by Roger Deakins, a director of 
 
 | ![winter][winter]            | ![horseback][horseback]     | 
 |:----------------------------:|:---------------------------:|
-|  Note the blurring around the edges of the image.        | In this particular image, the optical vignetting can be seen around the edges of the image. | 
-
+|  Note the blurring around the edges of the image.        | In this particular image, note how the colors have been washed out. | 
 
 The dream-like effect is attributed to the following three effects:
 
@@ -121,6 +120,12 @@ The following section compares post-Lambertian models of the Moon with the stand
 |:----------------------------:|:---------------------------:|
 |          Base Image          |       Overall Deakins       | 
 
+Although it wouldn't adhere to precisely to the laws of physics, the parameters can be tweaked to produce the desired artistic effect:
+
+|   ![alt][simpledeakinsalt]  | 
+|:---------------------------:|
+|A bit darker, a bit hazier...| 
+
 ## In what situations is the Deakins effect applicable?
     
   * Situations in which an overall effect is to create a dream-like quality, in which a memory is fuzzily recalled, but perhaps not perfectly remembered.
@@ -148,5 +153,6 @@ The following section compares post-Lambertian models of the Moon with the stand
 [simplevignette]:          OutputGallery/Simple/SimpleVignette.png
 [simplediffraction]:          OutputGallery/Simple/SimpleDiffraction.png
 [simpledeakins]:          OutputGallery/Simple/SimpleDeakins.png
+[simpledeakinsalt]:          OutputGallery/Simple/test5.png
 [winter]:          OutputGallery/Stills/Aojj_winter.jpg
 [horseback]:          OutputGallery/Stills/jesse-james.jpg
