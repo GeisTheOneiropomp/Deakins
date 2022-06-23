@@ -7,6 +7,11 @@ This project implements several vintage camera effects inspired by the work of t
 
 This program implements some effects identified by Roger Deakins, a director of photography who is regarded as a legend in the world of cinematography. For his film The Assassination of Jesse James by the Coward Robert Ford, Deakins created a camera with a special kind of lens that is used to create shots that have been described as dreamy and etheral for its transitions. Two such shots are shown below:
 
+| ![winter][winter]            | ![horseback][horseback]     | 
+|:----------------------------:|:---------------------------:|
+|  Note the blurring around the edges of the image.        | In this particular image, the optical vignetting can be seen around the edges of the image. | 
+
+
 The dream-like effect is attributed to the following three effects:
 
   - Tilt-shift lens: Since the Deakinizer can be tilted on the horizontal x-axis, and shifted along the vertical z-axis, it is possible to create different vanishing lines in the image. 
@@ -143,3 +148,6 @@ The following section compares post-Lambertian models of the Moon with the stand
 [simplevignette]:          OutputGallery/Simple/SimpleVignette.png
 [simplediffraction]:          OutputGallery/Simple/SimpleDiffraction.png
 [simpledeakins]:          OutputGallery/Simple/SimpleDeakins.png
+
+[winter]:          OutputGallery/Stills/Aojj_winter.jpg
+[horseback]:          OutputGallery/Stills/jesse-james.jpg
