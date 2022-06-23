@@ -9,11 +9,11 @@ This program implements some effects identified by Roger Deakins, a director of 
 
 The dream-like effect is attributed to the following three effects:
 
-	- Tilt-shift lens: Since the Deakinizer can be tilted on the horizontal x-axis, and shifted along the vertical z-axis, it is possible to create different vanishing lines in the image. 
+  - Tilt-shift lens: Since the Deakinizer can be tilted on the horizontal x-axis, and shifted along the vertical z-axis, it is possible to create different vanishing lines in the image. 
 
-	- Optical vignetting: Since the Deakinizer lens that Lopez and Hammerski made was done by removing a lens element, some of the light that is focused into the camera–particularly around the edges–is darker. This phenomenon is referred to as vignetting and it follows a cosine-fourth power law. 
+  - Optical vignetting: Since the Deakinizer lens that Lopez and Hammerski made was done by removing a lens element, some of the light that is focused into the camera–particularly around the edges–is darker. This phenomenon is referred to as vignetting and it follows a cosine-fourth power law. 
 
-	- Color diffraction: A Deakinizer lens also produces slight color diffraction due to the light rays diffracting as they hit the edge of the lens barrel. 
+  - Color diffraction: A Deakinizer lens also produces slight color diffraction due to the light rays diffracting as they hit the edge of the lens barrel. 
 
 This project implements those three effects in an attempt to reproduce the above-effects.
 
@@ -118,7 +118,7 @@ The following section compares post-Lambertian models of the Moon with the stand
 
 ## In what situations is the Deakins effect applicable?
     
-  * Situations in which an overall effect is to create a dream-like quality, in which a memory is fuzzily recalled, but perhaps not perfectly remembered/
+  * Situations in which an overall effect is to create a dream-like quality, in which a memory is fuzzily recalled, but perhaps not perfectly remembered.
   
   * Situations in which one wishes to simulate the past. The original Deakinzer lens was made after the artist was asked to simulate the effects of recreating 19th-century photographs.
   
