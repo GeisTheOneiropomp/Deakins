@@ -230,6 +230,7 @@
   <ItemGroup>
     <ClInclude Include="Camera.h" />
     <ClInclude Include="ColorUtil.h" />
+    <ClInclude Include="Config.h" />
     <ClInclude Include="Dielectric.h" />
     <ClInclude Include="Diffraction.h" />
     <ClInclude Include="d_stb_image.h" />
@@ -259,9 +260,9 @@
   <ItemGroup>
     <ResourceCompile Include="Deakins.rc" />
   </ItemGroup>
-    <ItemGroup>
+  <ItemGroup>
     <Content Include="extern/img/**/*.jpg">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

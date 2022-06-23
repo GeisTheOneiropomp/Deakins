@@ -6,7 +6,7 @@ using namespace deakins_math;
 // aperture 
 Camera::Camera(Point3 lookFrom, Point3 lookAt, Vec3 upVec, double verticalFieldOfView,
     double aspectRatio, double aperture, double focusDistance,
-    double time0, double time1, double tilt0, double shift0, double tilt1, double shift1, bool useVignette) {
+    double time0, double time1, double tilt, double shift, bool useVignette) {
 
     auto theta = DegreesToRadians(verticalFieldOfView);
     auto height = tan(theta/2);
@@ -25,10 +25,8 @@ Camera::Camera(Point3 lookFrom, Point3 lookAt, Vec3 upVec, double verticalFieldO
     lensRadius = aperture / 2;
     this->time0 = time0;
     this->time1 = time1; 
-    this->tilt0 = tilt0;
-    this->tilt1 = tilt1;
-    this->shift0 = shift0;
-    this->shift1 = shift1;
+    this->tilt = tilt;
+    this->shift = shift;
     this->vignetteOption = useVignette;
 }
 
@@ -95,15 +93,13 @@ double Camera::vignetteFactor(double s, double t) const {
 
 double Camera::interpolateTilt(double randomVar) const {
    
-    auto tiltDiff = tilt1 - tilt0;
     auto timeFactor = randomVar * (time1 - time0);
-    return tilt0 + timeFactor* tiltDiff;
+    return timeFactor * tilt;
 
 }
 
 double Camera::interpolateShift(double randomVar) const {
 
-    auto tiltDiff = shift1 - shift0;
     auto timeFactor = randomVar * (time1 - time0);
-    return shift0 + timeFactor * tiltDiff;
+    return timeFactor * shift;
 }

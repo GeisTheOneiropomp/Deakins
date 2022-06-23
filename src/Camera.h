@@ -11,7 +11,7 @@ class Camera
 public:
     Camera(Point3 lookFrom, Point3 lookAt, Vec3 upVec, double fieldOfView, 
         double aspectRatio, double aperture, double focusDistance,
-        double time0, double time1, double tilt, double shift, double baseTilt, double baseShift, bool useVignette);
+        double time0, double time1, double tilt, double shift, bool useVignette);
 
     Ray getRay(double u, double v) const;
     MonochromaticRay getDiffractionRay(double s, double t, double wavelength) const;
@@ -30,8 +30,7 @@ private:
     Vec3 u, v, w;
     double lensRadius;
     double time0, time1;
-    double tilt0, shift0;
-    double tilt1, shift1;
+    double tilt, shift;
     bool vignetteOption;
 
     double getDiffractionIntensity(double theta, double waveLength) const;
