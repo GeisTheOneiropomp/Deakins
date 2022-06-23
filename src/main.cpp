@@ -1,4 +1,6 @@
 #include <iostream>
+#include <fstream>
+
 #include "ColorUtil.h"
 #include "Ray.h"
 #include "vec3.h"
@@ -53,7 +55,10 @@ int main() {
     Camera cam(lookfrom, lookat, vup, FieldOfView, AspectRatio, Aperture, DistToFocus, 0.0, 1.0, TiltFactor, ShiftFactor, UseVignette);
     // Render
 
-    std::cout << "P3\n" << ImageWidth << ' ' << ImageHeight << "\n255\n";
+    std::ofstream outfile;
+    outfile.open(OUTPUT);
+
+    outfile << "P3\n" << ImageWidth << ' ' << ImageHeight << "\n255\n";
 
     for (int j = ImageHeight - 1; j >= 0; --j) {
         std::cerr << "\rScanlines remaining: " << j << ' ' << std::flush;
@@ -71,9 +76,9 @@ int main() {
                     normal_pixel_color +=  DiffractionRayColorWithBackground(mr, skybox, world, MaxDepth) * cam.vignetteFactor(u, v, VignetteFactor);
                 }
             }
-            
-            ColorUtil::WriteColor(std::cout, normal_pixel_color, SamplesPerPixel);
+            ColorUtil::WriteColor(outfile, normal_pixel_color, SamplesPerPixel);
         }
     }
+    outfile.close();
     std::cerr << "\nDone.\n";
 }
