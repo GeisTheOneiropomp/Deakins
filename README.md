@@ -1,5 +1,3 @@
-# Deakins
-
 Deakins: A ray tracer simulating the effects of a vintage camera
 ====================================================================================================
 
@@ -140,8 +138,8 @@ The following section compares post-Lambertian models of the Moon with the stand
 
   * Color Diffraction:  The first thing that must be done is to sample across the spectrum of possible colors. To that end, we created a Monochromatic Ray class, that gives each ray a wavelength and intensity. There is also a helper function to convert a chromatic wavelength into its appropriate RGB value. There are many treatments of diffraction. In this paper, we shall only be concerned with far-field diffraction, (Fraunhoffer). Near-field effects, (Fresnel) are ignored, since the only diffraction that we are interested in is the diffraction occuring at the lens aperture, which is a significant distance away from the image plane. 
 
-[simpleunaltered]:          OutputGallery/SimpleUnaltered.png
-[simpletiltshift]:          OutputGallery/SimpleTiltShift.png
-[simplevignette]:          OutputGallery/SimpleVignette.png
-[simplediffraction]:          OutputGallery/SimpleDiffraction.png
-[simpledeakins]:          OutputGallery/SimpleDeakins.png
+[simpleunaltered]:          OutputGallery/Simple/SimpleUnaltered.png
+[simpletiltshift]:          OutputGallery/Simple/SimpleTiltShift.png
+[simplevignette]:          OutputGallery/Simple/SimpleVignette.png
+[simplediffraction]:          OutputGallery/Simple/SimpleDiffraction.png
+[simpledeakins]:          OutputGallery/Simple/SimpleDeakins.png
