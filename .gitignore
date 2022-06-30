@@ -362,3 +362,6 @@ MigrationBackup/
 FodyWeavers.xsd
 
 /img
+
+# image files
+*.ppm

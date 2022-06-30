@@ -43,6 +43,9 @@
     <Filter Include="Source Files\Rays">
       <UniqueIdentifier>{ff7513be-a3b7-4938-8f06-859c766888d1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="EasyBMP">
+      <UniqueIdentifier>{1a28075e-8bc6-4c9d-8092-664288f55218}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -107,6 +110,9 @@
     </ClCompile>
     <ClCompile Include="src\NoiseImageTexture.cpp">
       <Filter>Source Files\Textures</Filter>
+    </ClCompile>
+    <ClCompile Include="extern\EasyBMP\EasyBMP.cpp">
+      <Filter>EasyBMP</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -185,9 +191,6 @@
     <ClInclude Include="src\Camera.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\d_stb_image.h">
-      <Filter>Header Files\Textures</Filter>
-    </ClInclude>
     <ClInclude Include="src\FileResources.h">
       <Filter>Resource Files</Filter>
     </ClInclude>
@@ -196,6 +199,21 @@
     </ClInclude>
     <ClInclude Include="src\NoiseImageTexture.h">
       <Filter>Header Files\Textures</Filter>
+    </ClInclude>
+    <ClInclude Include="d_stb_image.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="extern\EasyBMP\EasyBMP.h">
+      <Filter>EasyBMP</Filter>
+    </ClInclude>
+    <ClInclude Include="extern\EasyBMP\EasyBMP_DataStructures.h">
+      <Filter>EasyBMP</Filter>
+    </ClInclude>
+    <ClInclude Include="extern\EasyBMP\EasyBMP_VariousBMPutilities.h">
+      <Filter>EasyBMP</Filter>
+    </ClInclude>
+    <ClInclude Include="extern\EasyBMP\EasyBMP_BMP.h">
+      <Filter>EasyBMP</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
