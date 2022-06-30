@@ -71,7 +71,7 @@ int main() {
                     normal_pixel_color +=  DiffractionRayColorWithBackground(mr, skybox, world, MaxDepth) * cam.vignetteFactor(u, v, VignetteFactor);
                 }
             }
-            ColorUtil::WriteColor(normal_pixel_color, SamplesPerPixel, &outputImage, OutputImageWidth - i - 1, OutputImageHeight - j - 1);
+            ColorUtil::WriteColor(normal_pixel_color, SamplesPerPixel, &outputImage, i, OutputImageHeight - j - 1);
         }
     }
     outputImage.WriteToFile(OUTPUT.c_str());
