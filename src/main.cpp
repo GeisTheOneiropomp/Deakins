@@ -24,12 +24,11 @@
 
 #include "FileResources.h"
 #include "Config.h"
-
+#include "../extern/EasyBMP/EasyBMP.h"
 using namespace deakins_math;
 
 int main() {
 
-    //world
     auto R = cos(pi / 4);
 
     HittableList world;
@@ -53,12 +52,9 @@ int main() {
     }
 
     Camera cam(lookfrom, lookat, vup, FieldOfView, AspectRatio, Aperture, DistToFocus, 0.0, 1.0, TiltFactor, ShiftFactor, UseVignette);
-    // Render
 
-    std::ofstream outfile;
-    outfile.open(OUTPUT);
-
-    outfile << "P3\n" << OutputImageWidth << ' ' << OutputImageHeight << "\n255\n";
+    BMP outputImage;
+    outputImage.SetSize(OutputImageWidth, OutputImageHeight);
     for (int j = OutputImageHeight - 1; j >= 0; --j) {
         std::cerr << "\rGenerating the Deakins Effect...\rCurrently Raytracing...Scanlines remaining: " << j << ' ' << std::flush;
         for (int i = 0; i < OutputImageWidth; ++i) {
@@ -75,9 +71,9 @@ int main() {
                     normal_pixel_color +=  DiffractionRayColorWithBackground(mr, skybox, world, MaxDepth) * cam.vignetteFactor(u, v, VignetteFactor);
                 }
             }
-            ColorUtil::WriteColor(outfile, normal_pixel_color, SamplesPerPixel);
+            ColorUtil::WriteColor(normal_pixel_color, SamplesPerPixel, &outputImage, i, OutputImageHeight - j - 1);
         }
     }
-    outfile.close();
+    outputImage.WriteToFile(OUTPUT.c_str());
     std::cerr << "\nDone.\n";
 }

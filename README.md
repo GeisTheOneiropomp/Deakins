@@ -25,14 +25,13 @@ This project implements those three effects in an attempt to reproduce the above
 
 1. Clone this repository.
 2. Compile to Release with Visual Studio. (Note well, this code project uses some Japanese characters. That may cause some compilation errors. If you encounter compilations, ensure that the file is encoded in UTF-8 and retry.)
-3. Run from either the command line or by just pressing F5 with Visual Studio. 
+3. Run from either the command line or by just running with Visual Studio. 
 
-The default output location is "deakins_output.ppm". It can be changed here:
+The default output location is "deakins_output.bmp". It can be changed here:
 `FileResources.h`:
 ```c++
-const static string OUTPUT = "deakins_output.ppm";
+const static string OUTPUT = "deakins_output.bmp";
 ```
-will generate a file called test.ppm that contains the ray-traced image.
 
 4. The project comes with a background image. It can be swapped out with one's own images, or panoramas by changing filenames in the FileResources.h file:
 
@@ -146,6 +145,16 @@ Although it wouldn't adhere to precisely to the laws of physics, the parameters 
   * Optical Vignetting:  Mathematically, the light falloff is proportional to the fourth power of the cosine of the angle at which light impinges the image plane. However, this may cause too much of a darkening effect in the image. Afterall, compared to vintage cameras, our ray-traced camera is so much more clear and has much more detail, so perhaps the cosine-fourth power law is too strong. 
 
   * Color Diffraction:  The first thing that must be done is to sample across the spectrum of possible colors. To that end, we created a Monochromatic Ray class, that gives each ray a wavelength and intensity. There is also a helper function to convert a chromatic wavelength into its appropriate RGB value. There are many treatments of diffraction. In this paper, we shall only be concerned with far-field diffraction, (Fraunhoffer). Near-field effects, (Fresnel) are ignored, since the only diffraction that we are interested in is the diffraction occuring at the lens aperture, which is a significant distance away from the image plane. 
+
+<<<<<<< HEAD
+## Other libraries and Copyright Information.
+=======
+## Can you briefly summarize the technical implementation?
+>>>>>>> 907d455... Update README.md
+
+No copyright infringement is intended. A full list of sources is provided in the accompanying PDF. 
+Original code was based on "Ray Tracing Weekend" series.
+Makes use of the EasyBMP library to output BMPs.
 
 [simpleunaltered]:          OutputGallery/Simple/SimpleUnaltered.png
 [simpletiltshift]:          OutputGallery/Simple/SimpleTiltShift.png
