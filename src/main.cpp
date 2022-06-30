@@ -58,15 +58,14 @@ int main() {
     std::ofstream outfile;
     outfile.open(OUTPUT);
 
-    outfile << "P3\n" << ImageWidth << ' ' << ImageHeight << "\n255\n";
-
-    for (int j = ImageHeight - 1; j >= 0; --j) {
-        std::cerr << "\rScanlines remaining: " << j << ' ' << std::flush;
-        for (int i = 0; i < ImageWidth; ++i) {
+    outfile << "P3\n" << OutputImageWidth << ' ' << OutputImageHeight << "\n255\n";
+    for (int j = OutputImageHeight - 1; j >= 0; --j) {
+        std::cerr << "\rGenerating the Deakins Effect...\rCurrently Raytracing...Scanlines remaining: " << j << ' ' << std::flush;
+        for (int i = 0; i < OutputImageWidth; ++i) {
             Color normal_pixel_color(0, 0, 0);
             for (int s = 0; s < SamplesPerPixel; ++s) {
-                auto u = (i + RandomDouble()) /  (double (ImageWidth - 1.0));
-                auto v = (j + RandomDouble()) /  (double (ImageHeight - 1.0));
+                auto u = (i + RandomDouble()) /  (double (OutputImageWidth - 1.0));
+                auto v = (j + RandomDouble()) /  (double (OutputImageHeight - 1.0));
                 if (RandomDouble(0, 1) < 1 - DiffractionRatio) {
                     Ray r = cam.getRay(u, v);
                     normal_pixel_color +=  RayColorWithBackground(r, skybox, world, MaxDepth) *cam.vignetteFactor(u, v, VignetteFactor);
