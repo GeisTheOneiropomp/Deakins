@@ -5,7 +5,7 @@ This project implements several vintage camera effects inspired by the work of t
 
 ## Digest
 
-This program implements some effects identified by Roger Deakins, a director of photography who is regarded as a legend in the world of cinematography. For his film The Assassination of Jesse James by the Coward Robert Ford, Deakins created a camera with a special kind of lens that is used to create shots that have been described as dreamy and etheral for its transitions. Two such shots are shown below:
+This program implements some effects identified by Roger Deakins, a director of photography who is regarded as a legend in the world of cinematography. For his film The Assassination of Jesse James by the Coward Robert Ford, Deakins created a camera with a special kind of lens (which has been dubbed the Deakinizer) that is used to create shots that have been described as dreamy and etheral for its transitions. Two such shots are shown below:
 
 | ![winter][winter]            | ![horseback][horseback]     | 
 |:----------------------------:|:---------------------------:|
@@ -15,7 +15,7 @@ The dream-like effect is attributed to the following three effects:
 
   - Tilt-shift lens: Since the Deakinizer can be tilted on the horizontal x-axis, and shifted along the vertical z-axis, it is possible to create different vanishing lines in the image. 
 
-  - Optical vignetting: Since the Deakinizer lens that Lopez and Hammerski made was done by removing a lens element, some of the light that is focused into the camera–particularly around the edges–is darker. This phenomenon is referred to as vignetting and it follows a cosine-fourth power law. 
+  - Optical vignetting: Since the Deakinizer lens was made by removing a lens element, some of the light that is focused into the camera-–particularly around the edges-–is darker. This phenomenon is referred to as vignetting. 
 
   - Color diffraction: A Deakinizer lens also produces slight color diffraction due to the light rays diffracting as they hit the edge of the lens barrel. 
 
@@ -24,16 +24,17 @@ This project implements those three effects in an attempt to reproduce the above
 ## Usage
 
 1. Clone this repository.
-2. Compile to Release with Visual Studio. (Note well, this code project uses some Japanese characters. That may cause some compilation errors.)
-3. Run from the command line. (In particular, do not run from the debugger) Note that the output will be a .ppm file. So for example, running 
+2. Compile to Release with Visual Studio. (Note well, this code project uses some Japanese characters. That may cause some compilation errors. If you encounter compilations, ensure that the file is encoded in UTF-8 and retry.)
+3. Run from either the command line or by just pressing F5 with Visual Studio. 
 
-```bash
-./deakins.exe > "test.ppm"
+The default output location is "deakins_output.ppm". It can be changed here:
+`FileResources.h`:
+```c++
+const static string OUTPUT = "deakins_output.ppm";
 ```
-
 will generate a file called test.ppm that contains the ray-traced image.
 
-4. The project comes with a background image. It can be swapped out with one's own background images, or moon textures by changing filenames in the FileResources.h file:
+4. The project comes with a background image. It can be swapped out with one's own images, or panoramas by changing filenames in the FileResources.h file:
 
 `FileResources.h`:
 ```c++
@@ -43,8 +44,6 @@ using namespace std;
 
 const static string TSURUTA_FILE = "..extern\\img\\Tsuruta.jpg";
 ```
-
-5. The default setting is to generate an image of spheres. To change the scene to balls randomly distributed throughout the scene, open the `Config.h` file, and change any number of the variables: 
 
 Many parameters related to the camera controls can be tweaked the:
 
@@ -99,7 +98,7 @@ const static double vignetteFactor = 2.0;
 
 ## Image Gallery: Color Diffraction
 
-The following section compares post-Lambertian models of the Moon with the standard Lambertian model:
+The following section shows the color diffraction part of the ray tracer. In photography, one often talks about being "diffraction-limited"; this color-diffracted image that would be "blended" with every image.
 
 | ![base][simpleunaltered]     | ![diff][simplediffraction]  | 
 |:----------------------------:|:---------------------------:|
@@ -114,7 +113,7 @@ const static double DiffractionRatio = .1f;
 
 ## Image Gallery: Overall Deakins Effect
 
-The following section compares post-Lambertian models of the Moon with the standard Lambertian model:
+The following section merges all of the effects into one final image:
 
 | ![base][simpleunaltered]     | ![deakins][simpledeakins]   | 
 |:----------------------------:|:---------------------------:|
