@@ -1,5 +1,5 @@
 #include "NoiseImageTexture.h"
-#include "extern/stb_image.h"
+#include "../extern/stb_image.h"
 #include "D_Util.h"
 
 NoiseImageTexture::NoiseImageTexture() : data(nullptr), width(0), height(0), bytes_per_scanline(0), scale(1)

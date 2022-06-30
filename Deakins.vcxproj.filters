@@ -45,156 +45,156 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Camera.cpp">
+    <ClCompile Include="src\Camera.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Vec3.cpp">
+    <ClCompile Include="src\Vec3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Lambertian.cpp">
+    <ClCompile Include="src\Lambertian.cpp">
       <Filter>Source Files\Materials</Filter>
     </ClCompile>
-    <ClCompile Include="Metal.cpp">
+    <ClCompile Include="src\Metal.cpp">
       <Filter>Source Files\Materials</Filter>
     </ClCompile>
-    <ClCompile Include="Dielectric.cpp">
+    <ClCompile Include="src\Dielectric.cpp">
       <Filter>Source Files\Materials</Filter>
     </ClCompile>
-    <ClCompile Include="HittableList.cpp">
+    <ClCompile Include="src\HittableList.cpp">
       <Filter>Source Files\Geometry</Filter>
     </ClCompile>
-    <ClCompile Include="Sphere.cpp">
+    <ClCompile Include="src\Sphere.cpp">
       <Filter>Source Files\Geometry</Filter>
     </ClCompile>
-    <ClCompile Include="MovingSphere.cpp">
+    <ClCompile Include="src\MovingSphere.cpp">
       <Filter>Source Files\Geometry</Filter>
     </ClCompile>
-    <ClCompile Include="Vec3Util.cpp">
+    <ClCompile Include="src\Vec3Util.cpp">
       <Filter>Source Files\Utilities</Filter>
     </ClCompile>
-    <ClCompile Include="SceneUtil.cpp">
+    <ClCompile Include="src\SceneUtil.cpp">
       <Filter>Source Files\Utilities</Filter>
     </ClCompile>
-    <ClCompile Include="RayColorUtil.cpp">
+    <ClCompile Include="src\RayColorUtil.cpp">
       <Filter>Source Files\Utilities</Filter>
     </ClCompile>
-    <ClCompile Include="ColorUtil.cpp">
+    <ClCompile Include="src\ColorUtil.cpp">
       <Filter>Source Files\Utilities</Filter>
     </ClCompile>
-    <ClCompile Include="SolidColor.cpp">
+    <ClCompile Include="src\SolidColor.cpp">
       <Filter>Source Files\Textures</Filter>
     </ClCompile>
-    <ClCompile Include="ImageTexture.cpp">
+    <ClCompile Include="src\ImageTexture.cpp">
       <Filter>Source Files\Textures</Filter>
     </ClCompile>
-    <ClCompile Include="Perlin.cpp">
+    <ClCompile Include="src\Perlin.cpp">
       <Filter>Source Files\Textures</Filter>
     </ClCompile>
-    <ClCompile Include="NoiseTexture.cpp">
+    <ClCompile Include="src\NoiseTexture.cpp">
       <Filter>Source Files\Textures</Filter>
     </ClCompile>
-    <ClCompile Include="Skybox.cpp">
+    <ClCompile Include="src\Skybox.cpp">
       <Filter>Source Files\Geometry</Filter>
     </ClCompile>
-    <ClCompile Include="Ray.cpp">
+    <ClCompile Include="src\Ray.cpp">
       <Filter>Source Files\Rays</Filter>
     </ClCompile>
-    <ClCompile Include="MonochromaticRay.cpp">
+    <ClCompile Include="src\MonochromaticRay.cpp">
       <Filter>Source Files\Rays</Filter>
     </ClCompile>
-    <ClCompile Include="NoiseImageTexture.cpp">
+    <ClCompile Include="src\NoiseImageTexture.cpp">
       <Filter>Source Files\Textures</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="resource.h">
+    <ClInclude Include="src\resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Vec3.h">
+    <ClInclude Include="src\Vec3.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Dielectric.h">
+    <ClInclude Include="src\Dielectric.h">
       <Filter>Header Files\Materials</Filter>
     </ClInclude>
-    <ClInclude Include="Lambertian.h">
+    <ClInclude Include="src\Lambertian.h">
       <Filter>Header Files\Materials</Filter>
     </ClInclude>
-    <ClInclude Include="Material.h">
+    <ClInclude Include="src\Material.h">
       <Filter>Header Files\Materials</Filter>
     </ClInclude>
-    <ClInclude Include="Metal.h">
+    <ClInclude Include="src\Metal.h">
       <Filter>Header Files\Materials</Filter>
     </ClInclude>
-    <ClInclude Include="MovingSphere.h">
+    <ClInclude Include="src\MovingSphere.h">
       <Filter>Header Files\Geometry</Filter>
     </ClInclude>
-    <ClInclude Include="Sphere.h">
+    <ClInclude Include="src\Sphere.h">
       <Filter>Header Files\Geometry</Filter>
     </ClInclude>
-    <ClInclude Include="Hittable.h">
+    <ClInclude Include="src\Hittable.h">
       <Filter>Header Files\Geometry</Filter>
     </ClInclude>
-    <ClInclude Include="HittableList.h">
+    <ClInclude Include="src\HittableList.h">
       <Filter>Header Files\Geometry</Filter>
     </ClInclude>
-    <ClInclude Include="ColorUtil.h">
+    <ClInclude Include="src\ColorUtil.h">
       <Filter>Header Files\Utilities</Filter>
     </ClInclude>
-    <ClInclude Include="RayColorUtil.h">
+    <ClInclude Include="src\RayColorUtil.h">
       <Filter>Header Files\Utilities</Filter>
     </ClInclude>
-    <ClInclude Include="D_Util.h">
+    <ClInclude Include="src\D_Util.h">
       <Filter>Header Files\Utilities</Filter>
     </ClInclude>
-    <ClInclude Include="SceneUtil.h">
+    <ClInclude Include="src\SceneUtil.h">
       <Filter>Header Files\Utilities</Filter>
     </ClInclude>
-    <ClInclude Include="Vec3Util.h">
+    <ClInclude Include="src\Vec3Util.h">
       <Filter>Header Files\Utilities</Filter>
     </ClInclude>
-    <ClInclude Include="Texture.h">
+    <ClInclude Include="src\Texture.h">
       <Filter>Header Files\Textures</Filter>
     </ClInclude>
-    <ClInclude Include="SolidColor.h">
+    <ClInclude Include="src\SolidColor.h">
       <Filter>Header Files\Textures</Filter>
     </ClInclude>
-    <ClInclude Include="ImageTexture.h">
+    <ClInclude Include="src\ImageTexture.h">
       <Filter>Header Files\Textures</Filter>
     </ClInclude>
-    <ClInclude Include="Perlin.h">
+    <ClInclude Include="src\Perlin.h">
       <Filter>Header Files\Textures</Filter>
     </ClInclude>
-    <ClInclude Include="NoiseTexture.h">
+    <ClInclude Include="src\NoiseTexture.h">
       <Filter>Header Files\Textures</Filter>
     </ClInclude>
-    <ClInclude Include="Skybox.h">
+    <ClInclude Include="src\Skybox.h">
       <Filter>Header Files\Geometry</Filter>
     </ClInclude>
-    <ClInclude Include="Diffraction.h">
+    <ClInclude Include="src\Diffraction.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Ray.h">
+    <ClInclude Include="src\Ray.h">
       <Filter>Header Files\Rays</Filter>
     </ClInclude>
-    <ClInclude Include="MonochromaticRay.h">
+    <ClInclude Include="src\MonochromaticRay.h">
       <Filter>Header Files\Rays</Filter>
     </ClInclude>
-    <ClInclude Include="Camera.h">
+    <ClInclude Include="src\Camera.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="d_stb_image.h">
+    <ClInclude Include="src\d_stb_image.h">
       <Filter>Header Files\Textures</Filter>
     </ClInclude>
-    <ClInclude Include="FileResources.h">
+    <ClInclude Include="src\FileResources.h">
       <Filter>Resource Files</Filter>
     </ClInclude>
-    <ClInclude Include="Config.h">
+    <ClInclude Include="src\Config.h">
       <Filter>Resource Files</Filter>
     </ClInclude>
-    <ClInclude Include="NoiseImageTexture.h">
+    <ClInclude Include="src\NoiseImageTexture.h">
       <Filter>Header Files\Textures</Filter>
     </ClInclude>
   </ItemGroup>
