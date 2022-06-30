@@ -25,7 +25,7 @@ This project implements those three effects in an attempt to reproduce the above
 
 1. Clone this repository.
 2. Compile to Release with Visual Studio. (Note well, this code project uses some Japanese characters. That may cause some compilation errors. If you encounter compilations, ensure that the file is encoded in UTF-8 and retry.)
-3. Run from either the command line or by just pressing F5 with Visual Studio. 
+3. Run from either the command line or by just running with Visual Studio. 
 
 The default output location is "deakins_output.bmp". It can be changed here:
 `FileResources.h`:
