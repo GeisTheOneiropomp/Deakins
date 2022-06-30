@@ -16,10 +16,6 @@ namespace ColorUtil {
 		g = sqrt(scale * g);
 		b = sqrt(scale * b);
 
-		out << static_cast<int>(256 * Clamp(r, 0.0, 0.999)) << ' '
-			<< static_cast<int>(256 * Clamp(g, 0.0, 0.999)) << ' '
-			<< static_cast<int>(256 * Clamp(b, 0.0, 0.999)) << '\n';
-
 		RGBApixel color;
 		color.Red = (int) (256 * Clamp(r, 0.0, 0.999));
 		color.Blue = (int) (256 * Clamp(b, 0.0, 0.999));
