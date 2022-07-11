@@ -146,15 +146,7 @@ Although it wouldn't adhere to precisely to the laws of physics, the parameters 
 
   * Color Diffraction:  The first thing that must be done is to sample across the spectrum of possible colors. To that end, we created a Monochromatic Ray class, that gives each ray a wavelength and intensity. There is also a helper function to convert a chromatic wavelength into its appropriate RGB value. There are many treatments of diffraction. In this paper, we shall only be concerned with far-field diffraction, (Fraunhoffer). Near-field effects, (Fresnel) are ignored, since the only diffraction that we are interested in is the diffraction occuring at the lens aperture, which is a significant distance away from the image plane. 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 ## Other libraries and Copyright Information.
-=======
-## Can you briefly summarize the technical implementation?
->>>>>>> 907d455... Update README.md
-=======
-## Other libraries and Copyright Information.
->>>>>>> 067121894f481534e99802af517215a49ede7227
 
 No copyright infringement is intended. A full list of sources is provided in the accompanying PDF. 
 Original code was based on "Ray Tracing Weekend" series.
