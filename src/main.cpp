@@ -75,5 +75,5 @@ int main() {
         }
     }
     outputImage.WriteToFile(OUTPUT.c_str());
-    std::cerr << "\nDone.\n";
+    std::cerr << "\nDone. Output File to " << OUTPUT << "\n";
 }
